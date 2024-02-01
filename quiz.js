@@ -68,7 +68,8 @@ const questions = [
 const startBtn = document.querySelector(".start-btn button")
 const exitBtn = document.querySelector(".exit-btn  button")
 const contBtn = document.querySelector(".cont-btn button")
-const quizContainer = document.querySelector(".question-container")
+const quizContainer = document.getElementById(".quiz");
+const questionContainer = document.querySelector(".questions")
 const answerBtns = document.querySelector(".answer-btns")
 const timer =  document.getElementById("timer")
 const questionCount = document.querySelector(".question-count span")
@@ -87,6 +88,7 @@ let timeLeft = 20
 
 
 startBtn.addEventListener("click", startQuiz)
+contBtn.addEventListener("click", continueQuiz )
 
 
 
@@ -109,8 +111,20 @@ function showRules() {
 
 function continueQuiz() {
     rules.style.display ="none"
+    quizContainer.style.display =  "flex"
+    quiz()
     
 }
+
+function quiz() {
+    quizContainer.style.display =  "block"
+    rules.style.display="none"
+    startBtn.parentElement.display  ="none"
+
+
+}
+
+
 
 
 
@@ -118,6 +132,9 @@ function continueQuiz() {
 
 function showSuccess() {
     success.style.display = "none"
+    quizContainer.style.display =  "none"
+    rules.style.display="none"
+    startBtn.parentElement.display  ="none"
 
 }
 
