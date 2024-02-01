@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="start-btn"><button>Start</button></div>
+
+    <div class="rules">
+      <h2>Some Rules of this quiz.</h2>
+      <hr />
+      <br />
+      <ol>
+        <li>You will have only 15 seconds to answer each questions.</li>
+        <li>Selected answers cant be undone.</li>
+        <li>Once time is up, options can't be selected.</li>
+        <li>You can't exit quiz while playing.</li>
+        <li>
+          you get points for correct answers and lose points if you select wrong
+          one.
+        </li>
+      </ol>
+      <hr />
+
+      <div class="YX">
+        <!-- gamer humor lol -->
+        <div class="exit-btn"><button>Exit Quiz</button></div>
+        <div class="cont-btn"><button>Continue</button></div>
+      </div>
+    </div>
+
+    <div class="quiz">
+      <h3>JS quiz app</h3>
+      <p class="timer">Time Remaining: <span id="time"></span></p>
+      <hr />
+      <div class="questions">
+        <div class="question-container"></div>
+
+        <div class="answer-btns">
+            
+        </div>
+      </div>
+
+      <br />
+      <div class="counter">
+        <div class="question-count"><span></span> of 50 Questions</div>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+
+    <div class="success">
+      <img src="images/tick.png" alt="Tick Mark" />
+      <p>You Completed the Quiz!</p>
+      <p>you got <span id="score"></span> out of 50 in this round.</p>
+    </div>
+
+    <script src="./quiz.js"></script>
+  </body>
+</html>
